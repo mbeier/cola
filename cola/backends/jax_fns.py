@@ -163,7 +163,7 @@ def lu_solve(a, b):
 
 def get_device(array):
     if not isinstance(array, jax.core.Tracer) and hasattr(array, 'device'):
-        return array.device()
+        return array.devices()
     else:
         return get_default_device()
 
